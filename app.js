@@ -28,7 +28,17 @@ app.get('/about', function(req, res) {
 });
 
 app.get('/tvshows', function(req, res) {
-    res.render('pages/tvshows');
+    let tv1 = "Billions";
+    let tv2 = "See";
+    let tv3 = "The White Princess";
+    let tv4 = "Miss Scarlet and the Duke";
+    res.render('pages/tvshows',{
+        val1 : tv1,
+        val2 : tv2,
+        val3 : tv3,
+        val4 : tv4
+
+    });
 });
 
 
