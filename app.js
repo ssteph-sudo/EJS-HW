@@ -32,14 +32,31 @@ app.get('/tvshows', function(req, res) {
     let tv2 = "See";
     let tv3 = "The White Princess";
     let tv4 = "Miss Scarlet and the Duke";
-    res.render('pages/tvshows',{
-        val1 : tv1,
-        val2 : tv2,
-        val3 : tv3,
-        val4 : tv4
+    res.render('pages/tvshows', {
+        val1: tv1,
+        val2: tv2,
+        val3: tv3,
+        val4: tv4
 
     });
 });
+
+app.get('/movies', function(req, res) {
+    let movie1 = "The Outsiders";
+    let movie2 = "To Kill a Mockingbird";
+    let movie3 = "Hidden Figures";
+    let movie4 = "SW: The Phantom Menace"
+    let movie5 = 'The Dark Knight';
+    res.render('pages/tvshows', {
+        val1: movie1,
+        val2: movie2,
+        val3: movie3,
+        val4: movie4,
+        val4: movie5
+
+    });
+});
+
 
 
 
@@ -51,11 +68,11 @@ app.get('/uploadData', function(req, res) {
     let idVar = req.param('id');
     let msgVar = req.param('msg');
     // passing an object, used like a dictionary, to the render code
-    res.render('pages/uploadData', { 
+    res.render('pages/uploadData', {
         value1PassedToRenderPage: idVar,
         value2PassedToRenderPage: msgVar
-     });
-  });
+    });
+});
 
 
 
@@ -63,11 +80,11 @@ app.get('/uploadData', function(req, res) {
 app.get('/error', function(req, res) {
     // should get real data from some real operation, but instead ...
     let message = "some text from someplace";
-    let errorObject ={
+    let errorObject = {
         status: "this is real bad",
         stack: "somebody called #$% somebody who called somebody <awful>"
     };
-    res.render('pages/error', {  // pass the data to the page renderer
+    res.render('pages/error', { // pass the data to the page renderer
         message: message,
         error: errorObject
     });
@@ -75,7 +92,7 @@ app.get('/error', function(req, res) {
 
 
 
-app.listen(3000);  // not setting port number in www.bin, simple to do here
+app.listen(3000); // not setting port number in www.bin, simple to do here
 console.log('3000 is the magic port');
 
 module.exports = app;
