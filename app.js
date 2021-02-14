@@ -27,6 +27,12 @@ app.get('/about', function(req, res) {
     res.render('pages/about');
 });
 
+app.get('/tvshows', function(req, res) {
+    res.render('pages/tvshows');
+});
+
+
+
 
 // upLoadData page 
 // sending a get with 1 param
