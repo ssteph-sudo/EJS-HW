@@ -46,13 +46,11 @@ app.get('/movies', function(req, res) {
     let movie2 = "To Kill a Mockingbird";
     let movie3 = "Hidden Figures";
     let movie4 = "SW: The Phantom Menace"
-    let movie5 = 'The Dark Knight';
-    res.render('pages/tvshows', {
+    res.render('pages/movies', {
         val1: movie1,
         val2: movie2,
         val3: movie3,
         val4: movie4,
-        val4: movie5
 
     });
 });
